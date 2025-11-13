@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrinho de Donuts 🍩</title>
+<link rel="stylesheet" href="./styles/MeuCarrinho.css">
+</head>
+<body>
+    <!-- Logo redonda flutuante -->
+   <div class="logo">
+    <img src="/imagem/Logo.png" alt="Logo Donuts Dreamland">
+  </div>
+    <!-- Cabeçalho com menu -->
+    <header> 
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./QuemSomos.html">Quem somos</a></li>
+          <li><a href="./NossosProdutos.html">Nossos Produtos</a></li>
+          <li><a href="./Contato.html">Contato</a></li>
+          <li><a href="./Cadastre-se.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </header>
+<header>
+<h1>🍩 Donut Lovers</h1>
+<p>Monte seu carrinho de donuts deliciosos!</p>
+</header>
+
+
+<section class="produtos">
+<h2>Donuts disponíveis</h2>
+
+<div class="produto" data-nome="Donut de Chocolate" data-preco="">
+<div class="produto-info">
+<h3>Donut de Chocolate</h3>
+<p>R$ 7,50</p>
+</div>
+<button class="adicionar">Adicionar</button>
+</div>
+
+<div class="produto" data-nome="Donut com Granulado" data-preco="8.00">
+<img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/donut-1958728_1280.jpg" alt="Donut com Granulado">
+<div class="produto-info">
+<h3>Donut com Granulado</h3>
+<p>R$ 8,00</p>
+</div>
+<button class="adicionar">Adicionar</button>
+</div>
+
+<div class="produto" data-nome="Donut de Morango" data-preco="7.00">
+<img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/donut-1282322_1280.jpg" alt="Donut de Morango">
+<div class="produto-info">
+<h3>Donut de Morango</h3>
+<p>R$ 7,00</p>
+</div>
+<button class="adicionar">Adicionar</button>
+</div>
+</section>
+
+<section class="carrinho">
+<h2>🛒 Seu Carrinho</h2>
+<div class="carrinho-lista" id="lista-carrinho"></div>
+<p class="total">Total: R$ <span id="total">0.00</span></p>
+<button class="finalizar">Finalizar Compra</button>
+</section>
+
+<script>
+const botoesAdicionar = document.querySelectorAll(".adicionar");
+const listaCarrinho = document.getElementById("lista-carrinho");
+const totalEl = document.getElementById("total");
+
+let total = 0;
+
+botoesAdicionar.forEach(botao => {
+botao.addEventListener("click", () => {
+const produto = botao.parentElement;
+const nome = produto.dataset.nome;
+const preco = parseFloat(produto.dataset.preco);
+
+const item = document.createElement("div");
+item.classList.add("item-carrinho");
+item.innerHTML = `
+<span>${nome}</span>
+<span>R$ ${preco.toFixed(2)}</span>
+<button class="remover">Remover</button>
+`;
+listaCarrinho.appendChild(item);
+
+total += preco;
+totalEl.textContent = total.toFixed(2);
+
+item.querySelector(".remover").addEventListener("click", () => {
+listaCarrinho.removeChild(item);
+total -= preco;
+totalEl.textContent = total.toFixed(2);
+});
+});
+});
+</script>
+</body>
+</html>

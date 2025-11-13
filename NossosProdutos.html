@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossos Produtos</title>
+<link rel="stylesheet" href="./styles/Produtos.css">
+</head>
+<body>
+
+<div class="logo">
+    <img src="./imagem/Logo.png" alt="Donuts Dreamland">
+</div>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./QuemSomos.html">Quem somos</a></li>
+            <li><a href="./NossosProdutos.html">Nossos Produtos</a></li>
+            <li><a href="./Contato.html">Contato</a></li>
+            <li><a href="./Cadastre-se.html">Cadastre-se</a></li>
+        </ul>
+    </nav>
+</header>
+     <!-- Carrinho -->
+     <aside class="carrinho" aria-labelledby="carrinho-title">
+        <h2 id="carrinho-title">
+          <span class="cart-icon small" aria-hidden="true">🛒</span>
+          Seu carrinho
+        </h2>
+  
+        <ul id="lista-carrinho" aria-live="polite"></ul>
+  
+        <p id="total">Total: R$ 0,00</p>
+  
+        <div class="carrinho-actions">
+          <button id="limpar-carrinho" class="btn-secondary">Limpar carrinho</button>
+          <button id="finalizar-compra" class="btn-primary">Finalizar compra</button>
+        </div>
+      </aside>
+  
+    <!-- JS -->
+    <script src="scripts/Carrinho.js" defer></script>
+
+<section class="titulo">
+    <h1>Nossos Produtos:</h1>
+</section>
+
+<main>
+<section class="produtos">
+
+    <!-- Coluna Tradicional -->
+    <div class="coluna">
+        <h2>Tradicional</h2>
+
+        <div class="produto">
+            <div class="info"><b>Canela & Açúcar</b> R$10,00<br>Clássico com toque de canela</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Canela & Açúcar', 10)">Adicionar</button>
+                <button onclick="removerItem('Canela & Açúcar')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Doce de Leite</b> R$12,00<br>Recheado com doce de leite argentino</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Doce de Leite', 12)">Adicionar</button>
+                <button onclick="removerItem('Doce de Leite')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Brigadeiro</b> R$12,00<br>Recheio de brigadeiro e cobertura de granulado</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Brigadeiro', 12)">Adicionar</button>
+                <button onclick="removerItem('Brigadeiro')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Beijinho</b> R$12,00<br>Recheado com creme de coco e cobertura de coco ralado</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Beijinho', 12)">Adicionar</button>
+                <button onclick="removerItem('Beijinho')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Paçoca</b> R$15,00<br>Recheio de creme de amendoim com cobertura crocante de paçoca</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Paçoca', 15)">Adicionar</button>
+                <button onclick="removerItem('Paçoca')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Sensação</b> R$15,00<br>Recheio de morango e cobertura de chocolate ao leite</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Sensação', 15)">Adicionar</button>
+                <button onclick="removerItem('Sensação')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Simpsons</b> R$15,00<br>Recheio de baunilha e cobertura de morango, confetes coloridos</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Simpsons', 15)">Adicionar</button>
+                <button onclick="removerItem('Simpsons')">Remover</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Coluna Especial -->
+    <div class="coluna">
+        <h2>Especial</h2>
+
+        <div class="produto">
+            <div class="info"><b>Leite Ninho & Nutella</b> R$25,00<br>Recheado com Nutella e coberto com creme de ninho</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Leite Ninho & Nutella', 25)">Adicionar</button>
+                <button onclick="removerItem('Leite Ninho & Nutella')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Oreo</b> R$20,00<br>Recheado com creme laka oreo coberto com pedaços de Oreo</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Oreo', 20)">Adicionar</button>
+                <button onclick="removerItem('Oreo')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Maracujá com Nutella</b> R$25,00<br>Recheado com brigadeiro de maracujá, cobertura de Nutella</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Maracujá com Nutella', 25)">Adicionar</button>
+                <button onclick="removerItem('Maracujá com Nutella')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Kit Kat</b> R$30,00<br>Recheado com creme de Kit Kat e coberto com pedaços de Kit Kat</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Kit Kat', 30)">Adicionar</button>
+                <button onclick="removerItem('Kit Kat')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Ferrero Rocher</b> R$30,00<br>Recheado com Nutella e coberto com pedaços de Ferrero Rocher</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Ferrero Rocher', 30)">Adicionar</button>
+                <button onclick="removerItem('Ferrero Rocher')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Kinder Bueno</b> R$30,00<br>Recheado com creme Bueno e coberto com pedaços de Kinder Bueno</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Kinder Bueno', 30)">Adicionar</button>
+                <button onclick="removerItem('Kinder Bueno')">Remover</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="info"><b>Ovomaltine</b> R$25,00<br>Recheado com creme de Ovomaltine e coberto com Rocks</div>
+            <div class="botoes">
+                <button onclick="adicionarItem('Ovomaltine', 25)">Adicionar</button>
+                <button onclick="removerItem('Ovomaltine')">Remover</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+</main>
+
+<footer>
+<p>© 2025 Donuts Dreamland - Todos os direitos reservados</p>
+</footer>
+
+<script>
+// JS do carrinho
+const listaCarrinho = document.getElementById('lista-carrinho');
+const totalCarrinho = document.getElementById('total');
+let carrinho = [];
+
+function adicionarItem(nome, preco) {
+    const itemExistente = carrinho.find(item => item.nome === nome);
+    if (itemExistente) {
+        itemExistente.quantidade += 1;
+    } else {
+        carrinho.push({ nome, preco, quantidade: 1 });
+    }
+    atualizarCarrinho();
+}
+
+function removerItem(nome) {
+    const itemIndex = carrinho.findIndex(item => item.nome === nome);
+    if (itemIndex > -1) {
+        carrinho[itemIndex].quantidade -= 1;
+        if (carrinho[itemIndex].quantidade === 0) {
+            carrinho.splice(itemIndex, 1);
+        }
+    }
+    atualizarCarrinho();
+}
+
+function atualizarCarrinho() {
+    listaCarrinho.innerHTML = '';
+    carrinho.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.nome} x${item.quantidade} - R$${(item.preco * item.quantidade).toFixed(2)}`;
+        listaCarrinho.appendChild(li);
+    });
+    const total = carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
+    totalCarrinho.textContent = `Total: R$ ${total.toFixed(2)}`;
+}
+</script>
+
+</body>
+</html>
